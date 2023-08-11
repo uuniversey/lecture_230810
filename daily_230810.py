@@ -169,25 +169,27 @@
 
 # 5432. 쇠막대기 자르기
 
-import sys
-sys.stdin = open('input_5432.txt', 'r')
-
-T = int(input())
-for tc in range(1, T+1):
-    laser = list(input())
-    stack = []
-    stick = 0
-
-    for i in laser:
-        if i == '(':
-            stack.append(i)
-
-        elif i == ')':
-            stack.pop()
-            if len(stack) == 0:
-                pass
-            else:
-                stick += len(stack)
-
-        # 막대기가 사라질때도 stick을 더하고 있음
-    print(f'#{tc} {stick}')
+# import sys
+# sys.stdin = open('input_5432.txt', 'r')
+#
+# T = int(input())
+# for tc in range(1, T+1):
+#     laser = list(input())
+#     stack = []
+#     stick = 1
+#     stack.append(laser[0])
+#
+#     for i in range(1, len(laser)):
+#
+#         if laser[i] == '(':
+#             stack.append(laser[i])
+#             stick += 1
+#
+#         elif laser[i] == ')':
+#             stack.pop()
+#
+#             if laser[i-1] == '(' and laser[i] == ')':
+#                 stick += len(stack)
+#                 stick -= 1
+#
+#     print(f'#{tc} {stick}')
